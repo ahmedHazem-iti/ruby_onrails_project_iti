@@ -1,0 +1,23 @@
+heello worled
+
+<%=@article%>
+<%= form_with model: @article, local: true do |form| %>
+ 
+
+<select id="cars" name='hh[]' multiple>
+
+</select>
+   <%= form.submit %>
+<% end %>
+ <% User.all.map do |x|%>
+ <%=x.email%>
+
+<hr>
+ <%end%>
+
+
+<%= options_for_select([
+<% User.all.map do |x|%>
+ <%=x.email%>
+ <%end%>
+], 2) %>
